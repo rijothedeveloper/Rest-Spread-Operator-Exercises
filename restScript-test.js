@@ -3,15 +3,11 @@ beforeAll( () => {
     values.years = 1;
     values.rate = 10;
   })
-  describe("my first suite", function() {
+  describe("Refactor it to use the rest operator & an arrow function", function() {
 
-    it('should calculate the monthly rate correctly', function () {
-        // const values = {
-        //   amount: 1000,
-        //   years: 1,
-        //   rate: 10,
-        // }
-        expect(calculateMonthlyPayment(values)).toBeCloseTo(134.99, 1)
+    it('should filter out odds', function () {
+        
+        expect(filterOutOdds(1,2,3,4,5,6,7)).toEqual([2, 4, 6])
       });
 
   })
