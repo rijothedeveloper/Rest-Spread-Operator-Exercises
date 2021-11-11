@@ -1,7 +1,5 @@
 beforeAll( () => {
-    values.amount = 1000;
-    values.years = 1;
-    values.rate = 10;
+    
   })
   describe("Refactor it to use the rest operator & an arrow function", function() {
 
@@ -22,10 +20,33 @@ beforeAll( () => {
 
   });
   
+  describe("mergeObjects", function() {
+
+    it("mergeObjects that accepts two objects and returns a new merged object", function() {
+      expect(mergeObjects({a:1, b:2}, {c:3, d:4})).toEqual({a:1, b:2, c:3, d:4});
+    })
+
+  })
   
-  
+  describe("doubleAndReturnArgs", function() {
+
+    it("doubleAndReturnArgs", function() {
+      expect(doubleAndReturnArgs([1,2,3],4,4)).toEqual([1,2,3,8,8]);
+      expect(doubleAndReturnArgs([2],10,4)).toEqual([2, 20, 8]);
+    })
+
+  })
+
+  describe("slice and dice", function() {
+
+    it("everything together", function() {
+      expect(extend([1,2,3],[4,5,6])).toEqual([1,2,3,4,5,6]);
+      expect(addKeyVal({a:1,b:2},'c',3)).toEqual({a:1,b:2,c:3});
+    })
+
+  })
   
   afterAll( () => {
-    values = {};
+    
   })
  
