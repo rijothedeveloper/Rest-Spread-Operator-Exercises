@@ -6,3 +6,5 @@
 //   }
 
 const filterOutOdds = (...nums) => nums.filter( (num) => num % 2 === 0);
+
+const findMin = (...nums) => nums.reduce( (min, next) => min<next ? min : next);

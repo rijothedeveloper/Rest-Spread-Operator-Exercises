@@ -12,6 +12,15 @@ beforeAll( () => {
 
   })
   
+
+  describe("Write a function called findMin that accepts a variable number of arguments and returns the smallest argument", function() {
+
+    it('should find min', function () {
+        
+      expect(findMin(1,2,3,4,5,6,7)).toEqual(1)
+    });
+
+  });
   
   
   
